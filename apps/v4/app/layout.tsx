@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { NuqsAdapter } from "nuqs/adapters/next/app"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 import { META_THEME_COLORS, siteConfig } from "@/lib/config"
 import { fontVariables } from "@/lib/fonts"
@@ -111,6 +112,7 @@ export default function RootLayout({
             </ActiveThemeProvider>
           </LayoutProvider>
         </ThemeProvider>
+        <SpeedInsights />
       </body>
     </html>
   )
